@@ -11,4 +11,6 @@ jobs:
     steps:
       - name: Auto comment on PR template
         uses: SeptrionalWelkin/comment-on-pr-action@v0.1.1-alpha
+        with:
+          secrets: ${{ secrets }}
           
