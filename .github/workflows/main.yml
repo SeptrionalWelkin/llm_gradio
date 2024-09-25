@@ -1,5 +1,16 @@
-            - name: Auto comment on PR template
-  # You may pin to the exact commit or the version.
-  # uses: SeptrionalWelkin/comment-on-pr-action@77e5fab2234a066c5d522b8e4a5c935d10f89f89
-  uses: SeptrionalWelkin/comment-on-pr-action@v0.1.1-alpha
+name: Greeting from Mona
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    
+jobs:
+  my-job:
+    name: Add a comment automatically to PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto comment on PR template
+        uses: SeptrionalWelkin/comment-on-pr-action@v0.1.1-alpha
+        with:
+          secrets: ${{ secrets }}
           
